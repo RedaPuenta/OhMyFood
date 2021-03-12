@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*Fichier à supprimer à la fin*/
+@media screen and (max-width: 500px) {
+  body {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../../images/maquette/Accueil.png") no-repeat;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 9000px;
+  }
+}
+* {
+  border: none black 1px solid;
+}
+
+/******************************/
+
+/*# sourceMappingURL=style.css.map */
