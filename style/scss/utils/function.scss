@@ -1,3 +1,4 @@
+// Transformer des 'px' en 'rem'
 @function rem($size) {
-    @return size / 16px * 1rem;
+    @return $size / 16px * 1rem;
 }

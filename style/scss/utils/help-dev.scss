@@ -1,7 +1,9 @@
+/*Construction du site sur une une référence de '414px' de large correspond à la rubrique "Iphone 6/7/8 Plus" de la DEVTools Google Chrome*/
+
 @media screen and (max-width: 500px){
     body{
-        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../../images/maquette/Accueil.png")  no-repeat;
-        background-position: 50% 0%;
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../../images/maquette/Accueil.png")  no-repeat;
+        background-position: 50% 10%;
         background-attachment: fixed;
         background-size: cover;
         height: 9000px;
@@ -11,3 +13,12 @@
 *{
     border: none black 1px solid;
 }
+
+@mixin bg{
+    background-color: rgba(255, 0, 0, 0.205)
+}
+
+@mixin bge{
+    background-color: rgba(0, 89, 255, 0.295)
+}
+

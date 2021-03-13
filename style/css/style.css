@@ -1,18 +1,277 @@
 @charset "UTF-8";
-/*Fichier à supprimer à la fin*/
-@media screen and (max-width: 500px) {
-  body {
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../../images/maquette/Accueil.png") no-repeat;
-    background-position: 50% 0%;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 9000px;
-  }
-}
+/***Reset CSS style***/
 * {
-  border: none black 1px solid;
+  padding: 0;
+  margin: 0;
 }
 
-/******************************/
+html {
+  font-size: 100%;
+}
+
+a, p, span, h1, h2, h3, h4, h5, h6, ::placeholder {
+  font-weight: normal;
+  font-size: medium;
+}
+
+a, p, span, h3, h4, h5, h6, ::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+/***(ACCUEIL ET MENU) : HEADER***/
+/*PARTIE 1 (ACCUEIL et MENU): EN-TETE*/
+.en-tete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+.en-tete--paint {
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.5);
+}
+.en-tete__logo {
+  margin-top: 10px;
+  width: 45%;
+}
+
+/***(ACCUEIL) : MAIN***/
+/*PARTIE 2 (ACCUEIL): LOCALISATION ET RESERVATION*/
+.loc-book__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  padding-right: 10px;
+}
+.loc-book__location--paint {
+  background-color: #e9e9e9;
+}
+.loc-book__location__search {
+  margin-left: 18px;
+  font-size: 1.21875rem;
+  background-color: transparent;
+  border: none;
+  width: 140px;
+}
+.loc-book__location__search::placeholder {
+  font-size: 1.21875rem;
+  font-weight: bold;
+  color: grey;
+}
+.loc-book__booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 45px 20px;
+}
+.loc-book__booking--paint {
+  background-color: #F2F2F2;
+}
+.loc-book__booking__title {
+  font-size: 1.5625rem;
+  padding: 0 40px 15px 40px;
+  font-weight: bold;
+}
+.loc-book__booking p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.loc-book__booking .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16.75px 27.5px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 15px;
+}
+.loc-book__booking .button--paint {
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 5px 8px 0px rgba(137, 137, 137, 0.5);
+}
+.loc-book__booking .button--paint span {
+  font-size: 1.125rem;
+  color: white;
+}
+
+/*PARTIE 3 (ACCUEIL): FONCTIONNEMENT*/
+.operation {
+  padding: 55px 20px 45px 20px;
+}
+.operation--paint {
+  background-color: white;
+}
+.operation__title {
+  font-size: 1.6875rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.operation__card {
+  display: flex;
+  align-items: center;
+  margin: 0 7px 30px 4px;
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+}
+.operation__card--paint {
+  box-shadow: 0px 5px 10px 0px rgba(190, 190, 190, 0.5);
+  background-color: #F2F2F2;
+}
+.operation__card__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  line-height: 0%;
+  border-radius: 30px;
+  margin-left: -10px;
+  color: white;
+}
+.operation__card__number--paint {
+  background-color: #9356DC;
+}
+.operation__card__icone {
+  text-align: center;
+  width: 30px;
+  margin: 0 20px;
+  color: grey;
+}
+.operation__card p {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/*PARTIE 4 (ACCUEIL): RESTAURANTS*/
+.resto {
+  padding: 55px 20px 50px 20px;
+}
+.resto--paint {
+  background-color: #F2F2F2;
+}
+.resto__title {
+  font-size: 1.6875rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.resto__card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.resto__card--paint {
+  box-shadow: 0px 2px 10px rgba(190, 190, 190, 0.5);
+}
+.resto__card__new {
+  position: absolute;
+  padding: 7px 12px;
+  border-radius: 3px;
+  background-color: #99E2D0;
+  color: green;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+}
+.resto__card__content-image {
+  height: 192px;
+  overflow: hidden;
+}
+.resto__card__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px 15px 18px;
+}
+.resto__card__description--paint {
+  background-color: white;
+}
+.resto__card__description__content-des__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.resto__card__description__content-des p {
+  font-size: 1.125rem;
+}
+
+/***(MENU) : MAIN***/
+/***(ACCUEIL ET MENU) : FOOTER***/
+/*PARTIE 5 (ACCUEIL ET MENU): PIED-DE-PAGE*/
+.footer {
+  padding: 28px 25px 30px 25px;
+  color: white;
+}
+.footer--paint {
+  background-color: #494949;
+}
+.footer__logo {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer__item__illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 12px;
+  margin-right: 10px;
+}
+.footer__item a {
+  color: inherit;
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+
+/***Contrôler la position des images à l'intèrieur des CARDS***/
+img[class*=card-control] {
+  object-fit: cover;
+}
+
+/*Images des CARDS de la page d'accueil*/
+.card-control-accueil-1 {
+  object-position: 50% calc(100% - 2px);
+  width: 100%;
+  height: 100%;
+}
+
+.card-control-accueil-2 {
+  object-position: 50% 61%;
+  width: 100%;
+  height: 100%;
+}
+
+.card-control-accueil-3 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.card-control-accueil-4 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */

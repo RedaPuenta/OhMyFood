@@ -1,0 +1,28 @@
+img[class*="card-control"]{
+    object-fit: cover;
+}
+
+/*Images des CARDS de la page d'accueil*/
+.card-control-accueil-1{
+    object-position: 50% calc(100% - 2px);
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-accueil-2{
+    object-position: 50% 61%;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-accueil-3{
+    object-position: 50% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-accueil-4{
+    object-position: 50% 100%;
+    width: 100%;
+    height: 100%;
+}

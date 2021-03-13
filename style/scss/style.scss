@@ -1,8 +1,26 @@
-/*Fichier à supprimer à la fin*/
-@import "utils/help-dev.scss";
-/******************************/
+// Aide au développement (Fichier à supprimer à la fin !!!!!!!)
+//@import "utils/help-dev.scss";
+
+// Les utilitaires
 @import "utils/function.scss";
 @import "utils/mixin.scss";
 @import "utils/variable.scss";
+
+// Le style CSS
+/***Reset CSS style***/
+@import "base/reset.scss";
+
+/***(ACCUEIL ET MENU) : HEADER***/
+@import "layouts/header.scss";
+
+/***(ACCUEIL) : MAIN***/
 @import "pages/accueil.scss";
+
+/***(MENU) : MAIN***/
 @import "pages/menu.scss";
+
+/***(ACCUEIL ET MENU) : FOOTER***/
+@import "layouts/footer.scss";
+
+/***Contrôler la position des images à l'intèrieur des CARDS***/
+@import "components/card-control.scss";

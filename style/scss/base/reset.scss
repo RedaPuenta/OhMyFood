@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+}
+
+a, p, span, h1, h2, h3, h4, h5, h6, ::placeholder{
+    font-weight: normal;
+    font-size: medium;
+}
+
+a, p, span, h3, h4, h5, h6, ::placeholder{
+    font-family: map-get($font-family, texts);
+}
+
+h1, h2{
+    font-family: map-get($font-family, titles);
+}
+
+a, a:hover, a:active{
+    text-decoration: none;
+    color: black;
+}
+

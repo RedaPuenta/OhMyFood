@@ -1,0 +1,18 @@
+/*PARTIE 1 (ACCUEIL et MENU): EN-TETE*/
+.en-tete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    position: relative;
+
+    &--paint{
+        background-color: map-get($background-color, one);
+        box-shadow: 0px 1px 5px map-get($box-shadow-color, one);
+    }
+
+    &__logo{
+        margin-top: 10px;
+        width: 45%;
+    }
+}
