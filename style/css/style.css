@@ -42,7 +42,7 @@ a, a:hover, a:active {
 }
 .en-tete__logo {
   margin-top: 10px;
-  width: 45%;
+  width: 186px;
 }
 
 /***(ACCUEIL) : MAIN***/
@@ -211,6 +211,23 @@ a, a:hover, a:active {
   font-size: 1.125rem;
 }
 
+/***RESPONSIVE DESIGN***/
+@media screen and (min-width: 500px) {
+  /*PARTIE 3 et 4 (ACCUEIL)*/
+  .operation__title, .resto__title {
+    margin-bottom: 0;
+  }
+
+  .operation--responsive, .resto--responsive {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .operation__card, .resto__card {
+    width: 460px;
+    margin: 30px auto 0 auto;
+  }
+}
 /***(MENU) : MAIN***/
 /***(ACCUEIL ET MENU) : FOOTER***/
 /*PARTIE 5 (ACCUEIL ET MENU): PIED-DE-PAGE*/
@@ -218,11 +235,18 @@ a, a:hover, a:active {
   padding: 28px 25px 30px 25px;
   color: white;
 }
+@media screen and (min-width: 500px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer--paint {
   background-color: #494949;
 }
 .footer__logo {
-  width: 30%;
+  width: 110px;
   margin-bottom: 20px;
 }
 .footer__item {
