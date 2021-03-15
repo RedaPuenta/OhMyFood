@@ -6,6 +6,9 @@
 @import "utils/mixin.scss";
 @import "utils/variable.scss";
 
+// Les composants
+@import "components/button.scss";
+
 // Le style CSS
 /***Reset CSS style***/
 @import "base/reset.scss";
