@@ -342,6 +342,33 @@ header .en-tete__logo {
   color: white;
 }
 
+/***RESPONSIVE DESIGN***/
+@media screen and (min-width: 500px) {
+  /*PARTIE 2 et 3 (MENU)*/
+  .poster {
+    height: 400px;
+  }
+
+  img[class*=card-control-menu] {
+    object-position: 50% 60%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu--responsive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu__dishes {
+    margin: 0 auto;
+  }
+
+  .menu__dishes__card {
+    width: 470px;
+  }
+}
 /***(ACCUEIL ET MENU) : FOOTER***/
 /*PARTIE 5 (ACCUEIL ET MENU): PIED-DE-PAGE*/
 .footer {
