@@ -1,0 +1,85 @@
+/***Les polices d'écritures***/
+/*Roboto*/
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/roboto_bold/Roboto-Bold-webfont.eot');
+    src: url('../../font/roboto_bold/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/roboto_bold/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('../../font/roboto_bold/Roboto-Bold-webfont.woff') format('woff'),
+         url('../../font/roboto_bold/Roboto-Bold-webfont.otf') format('opentype'),
+         url('../../font/roboto_bold/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../../font/roboto_bold/Roboto-Bold-webfont.svg#robotobold') format('svg');
+         
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/roboo_regular/Roboto-Regular-webfont.eot');
+    src: url('../../font/roboo_regular/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/roboo_regular/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../../font/roboo_regular/Roboto-Regular-webfont.woff') format('woff'),
+         url('../../font/roboto_bold/Roboto-Regular-webfont.otf') format('opentype'),
+         url('../../font/roboo_regular/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../../font/roboo_regular/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/roboto_light/Roboto-Light-webfont.eot');
+    src: url('../../font/roboto_light/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/roboto_light/Roboto-Light-webfont.woff2') format('woff2'),
+         url('../../font/roboto_light/Roboto-Light-webfont.woff') format('woff'),
+         url('../../font/roboto_bold/Roboto-Light-webfont.otf') format('opentype'),
+         url('../../font/roboto_light/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../../font/roboto_light/Roboto-Light-webfont.svg#robotolight') format('svg');
+
+    font-weight: 300;
+}
+
+/*Shrikhand*/
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../../font/shrikhand/Shrikhand-Regular-webfont.eot');
+    src: url('../../font/shrikhand/Shrikhand-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../font/shrikhand/Shrikhand-Regular-webfont.woff2') format('woff2'),
+        url('../../font/shrikhand/Shrikhand-Regular-webfont.woff') format('woff'),
+        url('../../font/shrikhand/Shrikhand-Regular-webfont.otf') format('opentype'),
+        url('../../font/shrikhand/Shrikhand-Regular-webfont.ttf') format('truetype'),
+        url('../../font/shrikhand/Shrikhand-Regular-webfont.svg#Shrikhand-Regular') format('svg');
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+}
+
+a, p, span, h1, h2, h3, h4, h5, h6, ::placeholder{
+    font-weight: normal;
+    font-size: medium;
+}
+
+a, p, span, h3, h4, h5, h6, ::placeholder{
+    font-family: map-get($font-family, texts);
+}
+
+h1, h2{
+    font-family: map-get($font-family, titles);
+    font-weight: normal;
+}
+
+a, a:hover, a:active{
+    text-decoration: none;
+    color: black;
+}
+

@@ -18,7 +18,7 @@ header{
 
         &--paint{
             background-color: map-get($background-color, one);
-            box-shadow: 0px 1px 5px map-get($box-shadow-color, one);
+            @include box-shadow-v1(0px, 1px, 5px, map-get($box-shadow-color, one))
         }
 
         &__logo{

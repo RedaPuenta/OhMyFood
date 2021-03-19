@@ -1,9 +1,7 @@
 /*PARTIE 2 (MENU): AFFICHE*/
 .poster{
-    position: relative;
     overflow: hidden;
     height: 300px;
-    z-index: 1;
     margin-bottom: -60px;
 }
 
@@ -15,7 +13,6 @@
     justify-content: center;
     border-radius: 40px 40px 0 0;
     padding-bottom: 78px;
-    z-index: 2;
 
     &--paint{
         background-color: map-get($background-color, three);
@@ -24,14 +21,18 @@
     &__headline{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 35px 22px 0 22px;
+        font-size: rem(14px); // Pour les icones
 
         &__title{
             font-size: rem(30px);
         }
 
         &__icon{
-            margin-right: 15px;
+            color: black;
+            margin-right: 18px;
+            font-size: inherit;
         }
     }
 
@@ -67,30 +68,64 @@
             height: 76px;
             margin-top: 15px;
             border-radius: 20px;
+            overflow: hidden;
 
             &--paint{
                 background-color: map-get($background-color, one);
-                box-shadow: 0px 2px 10px map-get($box-shadow-color, one);
+                @include box-shadow-v1(0px, 2px, 10px, map-get($box-shadow-color, one));
             }
 
-            &__content-des{
-                padding-left: 10px;
+            &__content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                overflow: hidden;
 
-                &__title{
-                    font-size: rem(20px);
-                    font-weight: bold;
-                    margin-bottom: 5px;
+                &--des{
+                    padding-left: 10px;
+                    overflow: hidden;
+                    width: 100%;
+
+                    &__title{
+                        font-size: rem(20px);
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    &__text{
+                        font-size: rem(16px);
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    &__price{
+                        padding: 30px 26px 0px 20px;
+                        font-weight: bold;
+                    }
+                } 
+            }
+
+            &__check{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem(18px); // Pour les icones
+
+                &--paint{
+                    background-color: map-get($color-client, third);
                 }
 
-                p{
-                    font-size: rem(16px);
+                &__icon{
+                    color: white;
+                    font-size: inherit;
                 }
-
-                &__price{
-                    padding: 30px 26px 0 0;
-                    font-weight: bold;
-                }
-            } 
+            }
         }
     }
 
@@ -123,4 +158,43 @@
     .menu__dishes__card{
         width: 470px;
     }
+}
+
+/***ANIMATIONS***/ 
+/*Effet d'apparition des CARDS au chargement de la page*/
+@for $i from 1 through 4 {
+    .menu__dishes__card:nth-of-type(#{$i}){
+        animation-delay: ((200*$i)+200)*1ms;
+    }
+}
+
+.menu__dishes__card{
+    animation: forapparition 1s ease-out forwards;
+    opacity: 0;
+    transform: translate(0, 15px);
+}
+
+@keyframes forapparition{
+    100%{
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+/*Effet d'apparition des checks au survol de la souris sur les CARDS*/
+.menu__dishes__card__check{
+    transition: width 0.3s ease-in-out;
+    width: 0px;
+}
+
+.menu__dishes__card:hover .menu__dishes__card__check{
+    width: 77px;
+}
+
+.menu__dishes__card__check__icon{
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu__dishes__card:hover .menu__dishes__card__check__icon{
+    transform: rotate(1turn);
 }

@@ -1,5 +1,31 @@
 @charset "UTF-8";
-/***Reset CSS style***/
+/***Base CSS style***/
+/***Les polices d'écritures***/
+/*Roboto*/
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/roboto_bold/Roboto-Bold-webfont.eot");
+  src: url("../../font/roboto_bold/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/roboto_bold/Roboto-Bold-webfont.woff2") format("woff2"), url("../../font/roboto_bold/Roboto-Bold-webfont.woff") format("woff"), url("../../font/roboto_bold/Roboto-Bold-webfont.otf") format("opentype"), url("../../font/roboto_bold/Roboto-Bold-webfont.ttf") format("truetype"), url("../../font/roboto_bold/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/roboo_regular/Roboto-Regular-webfont.eot");
+  src: url("../../font/roboo_regular/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/roboo_regular/Roboto-Regular-webfont.woff2") format("woff2"), url("../../font/roboo_regular/Roboto-Regular-webfont.woff") format("woff"), url("../../font/roboto_bold/Roboto-Regular-webfont.otf") format("opentype"), url("../../font/roboo_regular/Roboto-Regular-webfont.ttf") format("truetype"), url("../../font/roboo_regular/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/roboto_light/Roboto-Light-webfont.eot");
+  src: url("../../font/roboto_light/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/roboto_light/Roboto-Light-webfont.woff2") format("woff2"), url("../../font/roboto_light/Roboto-Light-webfont.woff") format("woff"), url("../../font/roboto_bold/Roboto-Light-webfont.otf") format("opentype"), url("../../font/roboto_light/Roboto-Light-webfont.ttf") format("truetype"), url("../../font/roboto_light/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: 300;
+}
+/*Shrikhand*/
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../font/shrikhand/Shrikhand-Regular-webfont.eot");
+  src: url("../../font/shrikhand/Shrikhand-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.woff2") format("woff2"), url("../../font/shrikhand/Shrikhand-Regular-webfont.woff") format("woff"), url("../../font/shrikhand/Shrikhand-Regular-webfont.otf") format("opentype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.ttf") format("truetype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.svg#Shrikhand-Regular") format("svg");
+}
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +46,7 @@ a, p, span, h3, h4, h5, h6, ::placeholder {
 
 h1, h2 {
   font-family: "Shrikhand", cursive;
+  font-weight: normal;
 }
 
 a, a:hover, a:active {
@@ -47,7 +74,7 @@ header .en-tete {
 }
 header .en-tete--paint {
   background-color: white;
-  box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.5);
+  box-shadow: 0px 1px 5px 0 rgba(190, 190, 190, 0.5);
 }
 header .en-tete__logo {
   margin-top: 10px;
@@ -94,7 +121,7 @@ header .en-tete__logo {
   padding: 0 40px 15px 40px;
   font-weight: bold;
 }
-.loc-book__booking p {
+.loc-book__booking__text {
   font-size: 1.25rem;
   margin-bottom: 30px;
   font-weight: 300;
@@ -103,7 +130,7 @@ header .en-tete__logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16.75px 27.5px;
+  padding: 16.75px 26.5px;
   border-radius: 30px;
   border: none;
   margin: 0 auto 15px auto;
@@ -111,12 +138,21 @@ header .en-tete__logo {
   width: 250px;
 }
 .loc-book__booking .button--paint {
-  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 8px 0px rgba(137, 137, 137, 0.5);
+  background: linear-gradient(#FF79DA, #9356DC);
+  transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.loc-book__booking .button--paint span {
+.loc-book__booking .button--paint:hover {
+  box-shadow: 0px 8.5px 13.6px 1px rgba(112, 112, 112, 0.5);
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
+.loc-book__booking .button__message {
   font-size: 1.125rem;
   color: white;
+}
+.loc-book__booking .button:hover {
+  cursor: pointer;
 }
 
 /*PARTIE 3 (ACCUEIL): FONCTIONNEMENT*/
@@ -140,7 +176,7 @@ header .en-tete__logo {
   border-radius: 20px;
 }
 .operation__card--paint {
-  box-shadow: 0px 5px 10px 0px rgba(190, 190, 190, 0.5);
+  box-shadow: 0px 5px 10px 0 rgba(190, 190, 190, 0.5);
   background-color: #F2F2F2;
 }
 .operation__card__number {
@@ -157,13 +193,13 @@ header .en-tete__logo {
 .operation__card__number--paint {
   background-color: #9356DC;
 }
-.operation__card__icone {
+.operation__card__icon {
   text-align: center;
   width: 30px;
   margin: 0 20px;
   color: grey;
 }
-.operation__card p {
+.operation__card__text {
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -189,17 +225,20 @@ header .en-tete__logo {
   margin-bottom: 20px;
 }
 .resto__card--paint {
-  box-shadow: 0px 2px 10px rgba(190, 190, 190, 0.5);
+  box-shadow: 0px 2px 10px 0 rgba(190, 190, 190, 0.5);
+  background-color: white;
 }
 .resto__card__new {
   position: absolute;
   padding: 7px 12px;
   border-radius: 3px;
-  background-color: #99E2D0;
   color: green;
   font-weight: bold;
   top: 15px;
   right: 15px;
+}
+.resto__card__new--paint {
+  background-color: #99E2D0;
 }
 .resto__card__content-image {
   height: 192px;
@@ -210,16 +249,20 @@ header .en-tete__logo {
   justify-content: space-between;
   padding: 20px 25px 15px 18px;
 }
-.resto__card__description--paint {
-  background-color: white;
-}
 .resto__card__description__content-des__title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.resto__card__description__content-des p {
+.resto__card__description__content-des__text {
   font-size: 1.125rem;
+}
+.resto__card__description__content-fav {
+  font-size: 0.8125rem;
+}
+.resto__card__description__content-fav__icon {
+  color: black;
+  margin: 8px 2px 0 0;
 }
 
 /***RESPONSIVE DESIGN***/
@@ -242,10 +285,8 @@ header .en-tete__logo {
 /***(MENU) : MAIN***/
 /*PARTIE 2 (MENU): AFFICHE*/
 .poster {
-  position: relative;
   overflow: hidden;
   height: 300px;
-  z-index: 1;
   margin-bottom: -60px;
 }
 
@@ -257,7 +298,6 @@ header .en-tete__logo {
   justify-content: center;
   border-radius: 40px 40px 0 0;
   padding-bottom: 78px;
-  z-index: 2;
 }
 .menu--paint {
   background-color: #F2F2F2;
@@ -265,13 +305,17 @@ header .en-tete__logo {
 .menu__headline {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 35px 22px 0 22px;
+  font-size: 0.875rem;
 }
 .menu__headline__title {
   font-size: 1.875rem;
 }
 .menu__headline__icon {
-  margin-right: 15px;
+  color: black;
+  margin-right: 18px;
+  font-size: inherit;
 }
 .menu--responsive {
   padding-bottom: 50px;
@@ -302,31 +346,61 @@ header .en-tete__logo {
   height: 76px;
   margin-top: 15px;
   border-radius: 20px;
+  overflow: hidden;
 }
 .menu__dishes__card--paint {
   background-color: white;
-  box-shadow: 0px 2px 10px rgba(190, 190, 190, 0.5);
+  box-shadow: 0px 2px 10px 0 rgba(190, 190, 190, 0.5);
 }
-.menu__dishes__card__content-des {
+.menu__dishes__card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__dishes__card__content--des {
   padding-left: 10px;
+  overflow: hidden;
+  width: 100%;
 }
-.menu__dishes__card__content-des__title {
+.menu__dishes__card__content--des__title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu__dishes__card__content-des p {
+.menu__dishes__card__content--des__text {
   font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu__dishes__card__content-des__price {
-  padding: 30px 26px 0 0;
+.menu__dishes__card__content--des__price {
+  padding: 30px 26px 0px 20px;
   font-weight: bold;
+}
+.menu__dishes__card__check {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+}
+.menu__dishes__card__check--paint {
+  background-color: #99E2D0;
+}
+.menu__dishes__card__check__icon {
+  color: white;
+  font-size: inherit;
 }
 .menu .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16.75px 27.5px;
+  padding: 16.75px 26.5px;
   border-radius: 30px;
   border: none;
   margin: 0 auto 15px auto;
@@ -334,12 +408,21 @@ header .en-tete__logo {
   width: 210px;
 }
 .menu .button--paint {
-  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 8px 0px rgba(137, 137, 137, 0.5);
+  background: linear-gradient(#FF79DA, #9356DC);
+  transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.menu .button--paint span {
+.menu .button--paint:hover {
+  box-shadow: 0px 8.5px 13.6px 1px rgba(112, 112, 112, 0.5);
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
+.menu .button__message {
   font-size: 1.125rem;
   color: white;
+}
+.menu .button:hover {
+  cursor: pointer;
 }
 
 /***RESPONSIVE DESIGN***/
@@ -369,6 +452,54 @@ header .en-tete__logo {
     width: 470px;
   }
 }
+/***ANIMATIONS***/
+/*Effet d'apparition des CARDS au chargement de la page*/
+.menu__dishes__card:nth-of-type(1) {
+  animation-delay: 400ms;
+}
+
+.menu__dishes__card:nth-of-type(2) {
+  animation-delay: 600ms;
+}
+
+.menu__dishes__card:nth-of-type(3) {
+  animation-delay: 800ms;
+}
+
+.menu__dishes__card:nth-of-type(4) {
+  animation-delay: 1000ms;
+}
+
+.menu__dishes__card {
+  animation: forapparition 1s ease-out forwards;
+  opacity: 0;
+  transform: translate(0, 15px);
+}
+
+@keyframes forapparition {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+/*Effet d'apparition des checks au survol de la souris sur les CARDS*/
+.menu__dishes__card__check {
+  transition: width 0.3s ease-in-out;
+  width: 0px;
+}
+
+.menu__dishes__card:hover .menu__dishes__card__check {
+  width: 77px;
+}
+
+.menu__dishes__card__check__icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu__dishes__card:hover .menu__dishes__card__check__icon {
+  transform: rotate(1turn);
+}
+
 /***(ACCUEIL ET MENU) : FOOTER***/
 /*PARTIE 5 (ACCUEIL ET MENU): PIED-DE-PAGE*/
 .footer {

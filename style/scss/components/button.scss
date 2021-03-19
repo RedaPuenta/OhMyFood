@@ -7,7 +7,7 @@ $menu-width: 210px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 16.75px 27.5px;
+        padding: 16.75px 26.5px;
         border-radius: 30px;
         border: none;
         margin: 0 auto 15px auto;
@@ -19,14 +19,16 @@ $menu-width: 210px;
         }
 
         &--paint{
-            background: linear-gradient(map-get($color-client, secondary), map-get($color-client, primary));
-            box-shadow: 0px 5px 8px 0px map-get($box-shadow-color, two);
+            @include box-shadow-v3(0px, 5px, 8px, map-get($box-shadow-color, two));
+        }
+           
+        &__message{
+            font-size: rem(18px);
+            color: white;
+        }
 
-            span{
-                font-size: rem(18px);
-                color: white;
-            }
+        &:hover{
+            cursor: pointer;
         }
     }
-
 }

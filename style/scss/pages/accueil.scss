@@ -45,7 +45,7 @@
             font-weight: bold;
         }
 
-        p{
+        &__text{
             font-size: rem(20px);
             margin-bottom: 30px;
             font-weight: 300;
@@ -79,7 +79,7 @@
         border-radius: 20px;
 
         &--paint{
-            box-shadow: 0px 5px 10px 0px map-get($box-shadow-color, one);
+            @include box-shadow-v1(0px, 5px, 10px, map-get($box-shadow-color, one));
             background-color: map-get($background-color, three);
         }
 
@@ -99,14 +99,14 @@
             }
         }
 
-        &__icone{
+        &__icon{
             text-align: center;
             width: 30px;
             margin: 0 20px;
             color: grey;
         }
 
-        p{
+        &__text{
             font-size: rem(18px);
             font-weight: bold;
         }
@@ -138,18 +138,22 @@
         margin-bottom: 20px;
 
         &--paint{
-            box-shadow: 0px 2px 10px map-get($box-shadow-color, one);
+            @include box-shadow-v1(0px, 2px, 10px, map-get($box-shadow-color, one));
+            background-color: map-get($background-color, one);
         }
 
         &__new{
             position: absolute;
             padding: 7px 12px;
             border-radius: 3px;
-            background-color: map-get($color-client, third);
             color: green;
             font-weight: bold;
             top: 15px;
             right: 15px;
+
+            &--paint{
+                background-color: map-get($color-client, third);
+            }
             
         }
 
@@ -162,10 +166,6 @@
             display: flex;
             justify-content: space-between;
             padding: 20px 25px 15px 18px;
-        
-        &--paint{
-            background-color: map-get($background-color, one);
-        }
             
             &__content-des{
             
@@ -175,8 +175,17 @@
                     margin-bottom: 5px;
                 }
 
-                p{
+                &__text{
                     font-size: rem(18px);
+                }
+            }
+
+            &__content-fav{
+                font-size: rem(13px);
+
+                &__icon{
+                    color: black;
+                    margin: 8px 2px 0 0;
                 }
             }
         }

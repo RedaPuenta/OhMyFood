@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Connection au fichier CSS-->
-    <link rel="stylesheet" href="../../style/css/style.css">
-    <!--Google Font (Typographie  et Roboto)-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/css/style.css">  
     <!--Font Awesome-->
-    <link rel="stylesheet" href="../../fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Menu | À la française</title>
 </head>
 <body>
@@ -30,94 +28,141 @@
         <section class="menu menu--paint">
             <div class="menu__headline">
                 <h2 class="menu__headline__title">À la française</h2>
-                <i class="menu__headline__icon far fa-heart fa-2x"></i>
+                <i class="menu__headline__icon fa fa-heart-o fa-2x" aria-hidden="true"></i>
             </div>
             <div class="menu--responsive">
                 <div class="menu__dishes">
                     <h3 class="menu__dishes__title">ENTRÉES</h3>
                     <!--Entrée 1-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Entrée1">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Tartare de poulpe acidulé</h4>
-                            <p>Aux zests d'orange</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Tartare de poulpe acidulé</h4>
+                                <p class="menu__dishes__card__content--des__text">Aux zests d'orange</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">25€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">25€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Entrée 2-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Entrée2">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Velouté de légumes d'antan</h4>
-                            <p>Carotte, panais, topinambour</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Velouté de légumes d'antan</h4>
+                                <p class="menu__dishes__card__content--des__text">Carotte, panais, topinambour</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">35€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">35€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Entrée 3-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Entrée3">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Soupe à l'oignon</h4>
-                            <p>Revisitée</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Soupe à l'oignon</h4>
+                                <p class="menu__dishes__card__content--des__text">Revisitée</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">20€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">20€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="menu__dishes">
                     <h3 class="menu__dishes__title">PLATS</h3>
                     <!--Plat 1-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Plat1">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Coquilles Saint-Jacques</h4>
-                            <p>Accompagnées d'une purée de panais</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Coquilles Saint-Jacques</h4>
+                                <p class="menu__dishes__card__content--des__text">Accompagnées d'une purée de panais</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">40€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">40€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Plat 2-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Plat2">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Magret de canard</h4>
-                            <p>Et parmentier de pommes de terres</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Magret de canard</h4>
+                                <p class="menu__dishes__card__content--des__text">Et parmentier de pommes de terre</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">35€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">35€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Plat 3-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Plat3">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Pigeonneau d'Ille-et-Vilaine</h4>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Pigeonneau d’Ille-et-Vilaine</h4>
+                                <p class="menu__dishes__card__content--des__text">Sur son lit de gnocchis aux légumes</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">44€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">44€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="menu__dishes">
                     <h3 class="menu__dishes__title">DESSERTS</h3>
                     <!--Dessert 1-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Dessert1">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Pétales de violettes glacés</h4>
-                            <p>Et purée de noisettes</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Pétales de violettes glacés</h4>
+                                <p class="menu__dishes__card__content--des__text">Et purée de noisettes</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">18€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">18€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Dessert 2-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Dessert2">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Fondant au chocolat</h4>
-                            <p>Revisité</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Fondant au chocolat</h4>
+                                <p class="menu__dishes__card__content--des__text">Revisité</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">22€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">22€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                     <!--Dessert 3-->
                     <a class="menu__dishes__card menu__dishes__card--paint" href="#Dessert3">
-                        <div class="menu__dishes__card__content-des">
-                            <h4 class="menu__dishes__card__content-des__title">Millefeuille croustillant</h4>
-                            <p>Myrtilles et pâte d'amande</p>
+                        <div class="menu__dishes__card__content">
+                            <div class="menu__dishes__card__content--des">
+                                <h4 class="menu__dishes__card__content--des__title">Millefeuille croustillant</h4>
+                                <p class="menu__dishes__card__content--des__text">Myrtilles et pâte d’amande</p>
+                            </div>
+                            <span class="menu__dishes__card__content--des__price">23€</span>
                         </div>
-                        <span class="menu__dishes__card__content-des__price">23€</span>
+                        <div class="menu__dishes__card__check menu__dishes__card__check--paint">
+                            <i class="menu__dishes__card__check__icon fas fa-check-circle fa-lg"></i>
+                        </div>
                     </a>
                 </div>
             </div>
-            <a class="button button--paint" href="#">
-                <span>Commander</span>
-            </a>
+            <form method="POST" action="traitement.php">
+                <button class="button button--paint" type="button" name="order-btn" id="order-btn">
+                    <span class="button__message">Commander</span>
+                </button>
+            </form>
         </section>
     </main>
     <!--PARTIE 4 (MENU): PIED-DE-PAGE-->
