@@ -21,14 +21,17 @@
     </header>
     <main>
     <!--PARTIE 2 (MENU): AFFICHE-->
-        <section class="poster">
-            <img class="card-control-menu-1" src="../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du menu 'La palette du goût'">
-        </section>
+        <div class="poster">
+            <img class="components-card-control-menu-1" src="../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du menu 'La palette du goût'">
+        </div>
      <!--PARTIE 3 (MENU): LES PLATS-->
         <section class="menu menu--paint">
             <div class="menu__headline">
                 <h2 class="menu__headline__title">La palette du goût</h2>
-                <i class="menu__headline__icon fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                <div class="components-love-menu">
+                    <i class="components-love-menu__empty fa fa-heart-o fa-2x"></i>
+                    <i class="components-love-menu__filled fa fa-heart fa-2x"></i>
+                </div>
             </div>
             <div class="menu--responsive">
                 <div class="menu__dishes">
@@ -159,8 +162,8 @@
                 </div>
             </div>
             <form method="POST" action="traitement.php">
-                <button class="button button--paint" type="button" name="order-btn" id="order-btn">
-                    <span class="button__message">Commander</span>
+                <button class="components-button components-button--paint" type="button" name="order-btn" id="order-btn">
+                    <span class="components-button__message">Commander</span>
                 </button>
             </form>
         </section>

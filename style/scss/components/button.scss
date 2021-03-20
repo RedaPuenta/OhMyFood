@@ -1,9 +1,9 @@
 @mixin button($type){
 
-$accueil-width: 250px;
-$menu-width: 210px;
+$button-accueil-width: 250px;
+$button-menu-width: 210px;
 
-    .button{
+    .components-button{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,9 +13,13 @@ $menu-width: 210px;
         margin: 0 auto 15px auto;
         box-sizing: border-box;
         @if ($type == quote('accueil')){
-            width: $accueil-width;
+            width: $button-accueil-width;
         } @else if ($type == quote('menu')){
-            width: $menu-width;
+            width: $button-menu-width;
+        }  @else{
+            &::after{
+                content: "UNDEFINED";
+            }
         }
 
         &--paint{

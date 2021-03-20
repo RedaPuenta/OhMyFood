@@ -1,0 +1,53 @@
+@mixin love-menu($type) {
+
+    $love-accueil-margin: 0 14px 15px 0;
+    $love-accueil-fontSize: rem(13px);
+    $love-menu-margin: 0 27px 0 0;
+    $love-menu-fontSize: rem(14px);
+
+    .components-love-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @if ($type == quote('accueil')){
+            margin: $love-accueil-margin;
+            font-size: $love-accueil-fontSize;
+        } @else if ($type == quote('menu')){
+            margin: $love-menu-margin;
+            font-size: $love-menu-fontSize;
+        } @else{
+            &::after{
+                content: "UNDEFINED";
+            }
+        }
+
+        &__empty{
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        &__filled{
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+        }
+    }
+
+    /*Effet de remplissement du bouton j'aime en forme de coeur*/
+
+    .components-love-menu:hover .components-love-menu__empty{
+        transition: color 0.8s ease-in-out;
+        color: transparent;
+    }
+
+    .components-love-menu:hover .components-love-menu__filled{
+        transition: opacity 0.8s ease-in-out;
+        color: transparent;
+        opacity: 1;
+        background: $love-degraded;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+}

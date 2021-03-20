@@ -22,4 +22,4 @@ $font-family: (
 );
 
 $button-degraded: linear-gradient(map-get($color-client, secondary), map-get($color-client, primary));
-//background-image: linear-gradient(lighten(map-get($color-client, secondary) , 3%), lighten(map-get($color-client, primary), 3%));
+$love-degraded: linear-gradient(map-get($color-client, primary), map-get($color-client, secondary));

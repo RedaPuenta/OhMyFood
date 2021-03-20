@@ -3,11 +3,12 @@
 
 // Les utilitaires
 @import "utils/function.scss";
-@import "utils/mixin.scss";
+@import "utils/mixin-gen.scss";
 @import "utils/variable.scss";
 
 // Les composants
 @import "components/button.scss";
+@import "components/love-menu.scss";
 
 // Le style CSS
 /***Base CSS style***/
