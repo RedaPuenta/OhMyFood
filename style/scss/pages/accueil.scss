@@ -1,3 +1,4 @@
+/***(ACCUEIL) : MAIN***/
 /*PARTIE 2 (ACCUEIL): LOCALISATION ET RESERVATION*/
 .loc-book{
 
@@ -78,7 +79,7 @@
         border-radius: 20px;
 
         &--paint{
-            @include box-shadow-v1(0px, 5px, 10px, map-get($box-shadow-color, one));
+            @include box-shadow-operation(0px, 5px, 10px, map-get($box-shadow-color, one));
             background-color: map-get($background-color, three);
         }
 
@@ -137,7 +138,7 @@
         margin-bottom: 20px;
 
         &--paint{
-            @include box-shadow-v2(0px, 2px, 10px, map-get($box-shadow-color, one));
+            @include box-shadow-v3(0px, 2px, 10px, map-get($box-shadow-color, one));
             background-color: map-get($background-color, one);
         }
 
@@ -193,8 +194,7 @@
     }
 }
 
-/***RESPONSIVE DESIGN***/ 
-
+/***RESPONSIVE DESIGN (ACCUEIL)***/ 
 @media screen and (min-width: $size-start-tablet){
     /*PARTIE 3 et 4 (ACCUEIL)*/
     .operation__title, .resto__title{
@@ -212,15 +212,8 @@
     }
 }
 
-/***TRANSITION ET ANIMATION***/ 
-/*Changement de la couleur de fond des CARDS de la partie "FONCTIONNEMENT" au survol de la souris*/
-.operation__card{
-    transition: background-color 0.7s ease-in-out;
-}
-
-.operation__card:hover{
-    background-color: rgba(map-get($color-client, primary), 0.12);
-}
+/***TRANSITION ET ANIMATION (ACCUEIL)***/ 
+/*Changement de la couleur de fond des icones CARDS de la partie "FONCTIONNEMENT" au survol de la souris*/
 
 .operation__card__icon{
     transition: color 0.7s ease-in-out;
@@ -231,11 +224,12 @@
 }
 
 /*Effets de lumière sur les images des CARDS de la partie "RESTAURANTS" au survol de la souris*/
-
+// Pour les images avec une largeur plus dominante
 .resto__card:hover img[class*="components-card-control-accueil"]:not(.components-card-control-accueil-2){
     animation: forthelight 8s ease-in-out, presentation-img-short 8s ease-in-out;
 }
 
+// Pour les images avec une hauteur plus dominante
 .resto__card:hover .components-card-control-accueil-2{
     animation: forthelight 8s ease-in-out, presentation-img-long 8s ease-in-out;
 }

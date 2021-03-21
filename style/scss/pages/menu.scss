@@ -1,3 +1,4 @@
+/***(MENU) : MAIN***/
 /*PARTIE 2 (MENU): AFFICHE*/
 .poster{
     overflow: hidden;
@@ -31,7 +32,7 @@
         @include love-menu(menu)
     }
 
-    &--responsive{
+    &-responsive{
         padding-bottom: 50px;
     }
 
@@ -127,7 +128,7 @@
     @include button(menu);
 }
 
-/***RESPONSIVE DESIGN***/ 
+/***RESPONSIVE DESIGN (MENU)***/ 
 @media screen and (min-width: $size-start-tablet){
     /*PARTIE 2 et 3 (MENU)*/
     .poster{
@@ -155,7 +156,7 @@
     }
 }
 
-/***TRANSITION ET ANIMATION***/ 
+/***TRANSITION ET ANIMATION (MENU)***/ 
 /*Effet d'apparition des CARDS de la partie "MENU" au chargement de la page*/
 @for $i from 1 through 4 {
     .menu__dishes__card:nth-of-type(#{$i}){

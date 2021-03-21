@@ -1,0 +1,116 @@
+/***LOADING SPINNER***/
+.components-loading-spinner{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &--paint{
+        background-color: white;
+    }
+
+    &__content{
+        width: 100%;
+        max-width: 750px;
+        position: relative;
+
+        &__gradient{
+            width: 84%;
+            height: 94%;
+            position: absolute;
+            top: 3%;
+            left: 8%;
+            right: 8%;
+            bottom: 3%;
+
+            &--paint{
+                background-image: linear-gradient(0.25turn, map-get($color-client, primary), map-get($color-client, secondary), map-get($color-client, third));
+            }
+        }
+
+        &__logo{
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: screen;
+            position: relative;
+
+            &--paint{
+                background-color: white;
+            }
+
+            path{
+                fill: transparent;
+                stroke: black;
+                stroke-width: 1px;
+            }
+        }
+    }
+}
+
+/***TRANSITION ET ANIMATION (LOADING SPINNER)***/
+/*Disparition du "loading spinner"*/
+.components-loading-spinner{
+    z-index: 100;
+    animation: load-background $time-loading-spinner forwards;
+}
+
+@keyframes load-background{
+    99%{
+        z-index: 100;
+    }
+    
+    100%{
+        visibility: hidden;
+        z-index: -100;
+    }
+}
+
+/*Progression horizontal de la couleur dégradé du logo*/
+.components-loading-spinner__content__gradient{
+    transform-origin: left;
+    animation: progression $time-loading-spinner forwards ease-in-out;
+}
+
+@keyframes progression{
+    0%{
+        transform: scaleX(0);
+    }
+
+    83%{
+
+        transform: scaleX(1);
+    }
+}
+
+/*Effet de dessin progressif des lettres du logo, remplissage de celles-ci et effet de flou à un moment précis*/
+.components-loading-spinner__content__logo path{
+    stroke-dasharray: 185px;
+    stroke-dashoffset: 185px;
+    animation: drawing $time-loading-spinner forwards ease-in-out;
+}
+
+@keyframes drawing{
+    70%{
+        fill: transparent;
+        filter: blur(0px);
+    }
+
+    71%, 79%{
+        filter: blur(0.5px);
+    }
+
+    80%{
+        filter: blur(0px);
+    }
+
+    85%{
+        fill: black;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}

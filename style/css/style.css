@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/***Base CSS style***/
 /***Les polices d'écritures***/
 /*Roboto*/
 @font-face {
@@ -26,6 +25,7 @@
   src: url("../../font/shrikhand/Shrikhand-Regular-webfont.eot");
   src: url("../../font/shrikhand/Shrikhand-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.woff2") format("woff2"), url("../../font/shrikhand/Shrikhand-Regular-webfont.woff") format("woff"), url("../../font/shrikhand/Shrikhand-Regular-webfont.otf") format("opentype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.ttf") format("truetype"), url("../../font/shrikhand/Shrikhand-Regular-webfont.svg#Shrikhand-Regular") format("svg");
 }
+/***Règles générales***/
 * {
   padding: 0;
   margin: 0;
@@ -52,6 +52,161 @@ h1, h2 {
 a, a:hover, a:active {
   text-decoration: none;
   color: black;
+}
+
+/***LOADING SPINNER***/
+.components-loading-spinner {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.components-loading-spinner--paint {
+  background-color: white;
+}
+.components-loading-spinner__content {
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+}
+.components-loading-spinner__content__gradient {
+  width: 84%;
+  height: 94%;
+  position: absolute;
+  top: 3%;
+  left: 8%;
+  right: 8%;
+  bottom: 3%;
+}
+.components-loading-spinner__content__gradient--paint {
+  background-image: linear-gradient(0.25turn, #9356DC, #FF79DA, #99E2D0);
+}
+.components-loading-spinner__content__logo {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  position: relative;
+}
+.components-loading-spinner__content__logo--paint {
+  background-color: white;
+}
+.components-loading-spinner__content__logo path {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+/***TRANSITION ET ANIMATION (LOADING SPINNER)***/
+/*Disparition du "loading spinner"*/
+.components-loading-spinner {
+  z-index: 100;
+  animation: load-background 3s forwards;
+}
+
+@keyframes load-background {
+  99% {
+    z-index: 100;
+  }
+  100% {
+    visibility: hidden;
+    z-index: -100;
+  }
+}
+/*Progression horizontal de la couleur dégradé du logo*/
+.components-loading-spinner__content__gradient {
+  transform-origin: left;
+  animation: progression 3s forwards ease-in-out;
+}
+
+@keyframes progression {
+  0% {
+    transform: scaleX(0);
+  }
+  83% {
+    transform: scaleX(1);
+  }
+}
+/*Effet de dessin progressif des lettres du logo, remplissage de celles-ci et effet de flou à un moment précis*/
+.components-loading-spinner__content__logo path {
+  stroke-dasharray: 185px;
+  stroke-dashoffset: 185px;
+  animation: drawing 3s forwards ease-in-out;
+}
+
+@keyframes drawing {
+  70% {
+    fill: transparent;
+    filter: blur(0px);
+  }
+  71%, 79% {
+    filter: blur(0.5px);
+  }
+  80% {
+    filter: blur(0px);
+  }
+  85% {
+    fill: black;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/***Contrôler la position des images à l'intèrieur des CARDS***/
+img[class*=components-card-control] {
+  object-fit: cover;
+}
+
+/*Images des CARDS de la page d'accueil*/
+.components-card-control-accueil-1 {
+  object-position: 50% calc(100% - 2px);
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-accueil-2 {
+  object-position: 50% 61%;
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-accueil-3 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-accueil-4 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+/*Images des CARDS des pages menu*/
+.components-card-control-menu-1 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-menu-2 {
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-menu-3 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.components-card-control-menu-4 {
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /***(ACCUEIL ET MENU) : HEADER***/
@@ -176,8 +331,14 @@ a, a:hover, a:active {
   border-radius: 20px;
 }
 .operation__card--paint {
-  box-shadow: 0px 5px 10px 0 rgba(190, 190, 190, 0.5);
+  box-shadow: 0px 5px 10px 0px rgba(190, 190, 190, 0.5);
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
   background-color: #F2F2F2;
+}
+.operation__card--paint:hover {
+  background-color: rgba(147, 86, 220, 0.12);
+  box-shadow: 0px 8.5px 17px 1px rgba(165, 165, 165, 0.5);
+  transform: scale(1.01);
 }
 .operation__card__number {
   display: flex;
@@ -226,11 +387,12 @@ a, a:hover, a:active {
 }
 .resto__card--paint {
   box-shadow: 0px 2px 10px 0px rgba(190, 190, 190, 0.5);
-  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
   background-color: white;
 }
 .resto__card--paint:hover {
   box-shadow: 0px 3.4px 17px 1px rgba(165, 165, 165, 0.5);
+  filter: brightness(1.1);
   transform: scale(1.01);
 }
 .resto__card__new {
@@ -254,7 +416,6 @@ a, a:hover, a:active {
   display: flex;
   justify-content: space-between;
   padding: 20px 25px 15px 18px;
-  /*Effet de remplissement du bouton j'aime en forme de coeur*/
 }
 .resto__card__description__content-des__title {
   font-size: 1.25rem;
@@ -288,7 +449,7 @@ a, a:hover, a:active {
   opacity: 0;
 }
 .resto__card__description .components-love-menu:hover .components-love-menu__empty {
-  transition: color 0.8s ease-in-out;
+  transition: color 1s ease-in-out;
   color: transparent;
 }
 .resto__card__description .components-love-menu:hover .components-love-menu__filled {
@@ -304,20 +465,14 @@ a, a:hover, a:active {
   animation-iteration-count: 3;
 }
 @keyframes thrill {
-  2.5%, 22.5% {
-    transform: translate(0, -1px);
+  0%, 22.5% {
+    transform: scale(1.1);
   }
-  5%, 20% {
-    transform: translate(0, 2px);
+  5%, 10%, 15%, 20% {
+    transform: scale(1.2);
   }
-  7.5%, 12.5%, 17.5% {
-    transform: translate(0, -2px);
-  }
-  10%, 15% {
-    transform: translate(0, 2px);
-  }
-  50% {
-    transform: translate(0, 0px);
+  7.5%, 12.5%, 17.5%, 40% {
+    transform: scale(1);
   }
 }
 .resto__card__description .components-love-menu:active .components-love-menu__filled {
@@ -330,7 +485,7 @@ a, a:hover, a:active {
   filter: contrast(150%);
 }
 
-/***RESPONSIVE DESIGN***/
+/***RESPONSIVE DESIGN (ACCUEIL)***/
 @media screen and (min-width: 501px) {
   /*PARTIE 3 et 4 (ACCUEIL)*/
   .operation__title, .resto__title {
@@ -347,16 +502,8 @@ a, a:hover, a:active {
     margin: 30px auto 0 auto;
   }
 }
-/***TRANSITION ET ANIMATION***/
-/*Changement de la couleur de fond des CARDS de la partie "FONCTIONNEMENT" au survol de la souris*/
-.operation__card {
-  transition: background-color 0.7s ease-in-out;
-}
-
-.operation__card:hover {
-  background-color: rgba(147, 86, 220, 0.12);
-}
-
+/***TRANSITION ET ANIMATION (ACCUEIL)***/
+/*Changement de la couleur de fond des icones CARDS de la partie "FONCTIONNEMENT" au survol de la souris*/
 .operation__card__icon {
   transition: color 0.7s ease-in-out;
 }
@@ -429,7 +576,6 @@ a, a:hover, a:active {
   justify-content: space-between;
   align-items: center;
   padding: 35px 22px 0 22px;
-  /*Effet de remplissement du bouton j'aime en forme de coeur*/
 }
 .menu__headline__title {
   font-size: 1.875rem;
@@ -452,7 +598,7 @@ a, a:hover, a:active {
   opacity: 0;
 }
 .menu__headline .components-love-menu:hover .components-love-menu__empty {
-  transition: color 0.8s ease-in-out;
+  transition: color 1s ease-in-out;
   color: transparent;
 }
 .menu__headline .components-love-menu:hover .components-love-menu__filled {
@@ -468,20 +614,14 @@ a, a:hover, a:active {
   animation-iteration-count: 3;
 }
 @keyframes thrill {
-  2.5%, 22.5% {
-    transform: translate(0, -1px);
+  0%, 22.5% {
+    transform: scale(1.1);
   }
-  5%, 20% {
-    transform: translate(0, 2px);
+  5%, 10%, 15%, 20% {
+    transform: scale(1.2);
   }
-  7.5%, 12.5%, 17.5% {
-    transform: translate(0, -2px);
-  }
-  10%, 15% {
-    transform: translate(0, 2px);
-  }
-  50% {
-    transform: translate(0, 0px);
+  7.5%, 12.5%, 17.5%, 40% {
+    transform: scale(1);
   }
 }
 .menu__headline .components-love-menu:active .components-love-menu__filled {
@@ -493,7 +633,7 @@ a, a:hover, a:active {
   transition: filter 0.5s ease-in-out;
   filter: contrast(150%);
 }
-.menu--responsive {
+.menu-responsive {
   padding-bottom: 50px;
 }
 .menu__dishes {
@@ -606,7 +746,7 @@ a, a:hover, a:active {
   cursor: pointer;
 }
 
-/***RESPONSIVE DESIGN***/
+/***RESPONSIVE DESIGN (MENU)***/
 @media screen and (min-width: 501px) {
   /*PARTIE 2 et 3 (MENU)*/
   .poster {
@@ -633,7 +773,7 @@ a, a:hover, a:active {
     width: 470px;
   }
 }
-/***TRANSITION ET ANIMATION***/
+/***TRANSITION ET ANIMATION (MENU)***/
 /*Effet d'apparition des CARDS de la partie "MENU" au chargement de la page*/
 .menu__dishes__card:nth-of-type(1) {
   animation-delay: 400ms;
@@ -726,61 +866,6 @@ a, a:hover, a:active {
 .footer__item:hover {
   transition: color 0.5s;
   color: #99E2D0;
-}
-
-/***Contrôler la position des images à l'intèrieur des CARDS***/
-img[class*=components-card-control] {
-  object-fit: cover;
-}
-
-/*Images des CARDS de la page d'accueil*/
-.components-card-control-accueil-1 {
-  object-position: 50% calc(100% - 2px);
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-accueil-2 {
-  object-position: 50% 61%;
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-accueil-3 {
-  object-position: 50% 100%;
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-accueil-4 {
-  object-position: 50% 100%;
-  width: 100%;
-  height: 100%;
-}
-
-/*Images des CARDS des pages menu*/
-.components-card-control-menu-1 {
-  object-position: 50% 100%;
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-menu-2 {
-  object-position: 50% 50%;
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-menu-3 {
-  object-position: 50% 100%;
-  width: 100%;
-  height: 100%;
-}
-
-.components-card-control-menu-4 {
-  object-position: 50% 100%;
-  width: 100%;
-  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

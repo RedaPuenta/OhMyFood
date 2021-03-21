@@ -6,25 +6,24 @@
 @import "utils/mixin-gen.scss";
 @import "utils/variable.scss";
 
+// Les bases
+@import "base/font.scss";
+@import "base/rules-gen.scss";
+
 // Les composants
 @import "components/button.scss";
 @import "components/love-menu.scss";
+@import "components/loading-spinner.scss";
+@import "components/card-control.scss";
 
-// Le style CSS
-/***Base CSS style***/
-@import "base/base.scss";
-
-/***(ACCUEIL ET MENU) : HEADER***/
+// (ACCUEIL ET MENU) : HEADER
 @import "layouts/header.scss";
 
-/***(ACCUEIL) : MAIN***/
+// (ACCUEIL) : MAIN
 @import "pages/accueil.scss";
 
-/***(MENU) : MAIN***/
+//(MENU) : MAIN 
 @import "pages/menu.scss";
 
-/***(ACCUEIL ET MENU) : FOOTER***/
+//(ACCUEIL ET MENU) : FOOTER
 @import "layouts/footer.scss";
-
-/***Contrôler la position des images à l'intèrieur des CARDS***/
-@import "components/card-control.scss";
