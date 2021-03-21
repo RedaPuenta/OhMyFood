@@ -6,15 +6,16 @@
 //Box-shadow version 2
 @mixin box-shadow-v2($position-x, $position-y, $blur-r, $color){
     box-shadow: $position-x $position-y $blur-r 0px $color;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
     &:hover{
         box-shadow: $position-x $position-y*1.7 $blur-r*1.7 1px darken($color, 10%);
+        transform: scale(1.01);
     }
 }
 
 //Box-shadow version 3
 @mixin box-shadow-v3($position-x, $position-y, $blur-r, $color){
     box-shadow: $position-x $position-y $blur-r 0px $color;
-    background: $button-degraded;
     transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
     &:hover{
         box-shadow: $position-x $position-y*1.7 $blur-r*1.7 1px darken($color, 10%);

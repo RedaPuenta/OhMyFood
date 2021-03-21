@@ -1,15 +1,15 @@
 /*PARTIE 1 (ACCUEIL et MENU): EN-TETE*/
-header{
+.header{
     position: relative;
 
-    .back{
+    &__back{
         position: absolute;
         z-index: 2;
         top: 30px;
         left: 26px;
     }
 
-    .en-tete{
+    &__content{
         display: flex;
         justify-content: center;
         align-items: center;

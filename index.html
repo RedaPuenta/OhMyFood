@@ -13,9 +13,9 @@
 </head>
 <body>
     <!--PARTIE 1 (ACCUEIL): EN-TETE-->
-    <header>
-        <div class="en-tete en-tete--paint">
-            <img class="en-tete__logo" src="images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+    <header class="header">
+        <div class="header__content header__content--paint">
+            <img class="header__content__logo" src="./images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
         </div>
     </header>
     <main>
@@ -23,37 +23,39 @@
         <nav class="loc-book">
             <div class="loc-book__location loc-book__location--paint">
                 <i class="fas fa-map-marker-alt fa-lg"></i>
-                <form method="POST" action="traitement.php">
-                    <input class="loc-book__location__search" id="location" name="location" type="text" placeholder="Paris, Belleville">
-                </form>
+                <input class="loc-book__location__search" id="location" name="location" type="text" placeholder="Paris, Belleville">
             </div>
             <div class="loc-book__booking loc-book__booking--paint">
                 <h3 class="loc-book__booking__title">Réservez le menu qui vous convient</h3>
                 <p class="loc-book__booking__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <form method="POST" action="traitement.php">
-                    <button class="components-button components-button--paint" type="button" name="explorate-btn" id="explorate-btn">
-                        <span class="components-button__message">Explorer nos restaurants</span>
-                    </button>
-                </form>
+                <button class="components-button components-button--paint" type="button" name="explorate-btn" id="explorate-btn">
+                    <span class="components-button__message">Explorer nos restaurants</span>
+                </button>
             </div>
         </nav>
         <!--PARTIE 3 (ACCUEIL): FONCTIONNEMENT-->
         <section class="operation operation--paint">
             <h3 class="operation__title">Fonctionnement</h3>
-            <div class="operation--responsive">
+            <div class="operation-responsive">
                 <a class="operation__card operation__card--paint" href="#Choisissez-un-restaurant">
                     <span class="operation__card__number operation__card__number--paint">1</span>
-                    <div class="operation__card__icon"><i class="fas fa-mobile-alt fa-lg"></i></div>
+                    <div class="operation__card__icon">
+                        <i class="fas fa-mobile-alt fa-lg"></i>
+                    </div>
                     <p class="operation__card__text">Choisissez un restaurant</p>
                 </a>
                 <a class="operation__card operation__card--paint" href="#Composez-votre-menu">
                     <span class="operation__card__number operation__card__number--paint">2</span>
-                    <div class="operation__card__icon"><i class="fas fa-list-ul fa-lg"></i></div>
+                    <div class="operation__card__icon">
+                        <i class="fas fa-list-ul fa-lg"></i>
+                    </div>
                     <p class="operation__card__text">Composez votre menu</p>
                 </a>
                 <a class="operation__card operation__card--paint" href="#Dégustez-au-restaurant">
                     <span class="operation__card__number operation__card__number--paint">3</span>
-                    <div class="operation__card__icon"><i class="fas fa-store fa-lg"></i></div>
+                    <div class="operation__card__icon">
+                        <i class="fas fa-store fa-lg"></i>
+                    </div>
                     <p class="operation__card__text">Dégustez au restaurant</p>
                 </a>
             </div>
@@ -61,7 +63,7 @@
         <!--PARTIE 4 (ACCUEIL): RESTAURANTS-->
         <section class="resto resto--paint">
             <h3 class="resto__title">Restaurants</h3>
-            <div class="resto--responsive">
+            <div class="resto-responsive">
                 <!--CARD 1-->
                 <a class="resto__card resto__card--paint" href="./pages/menu/la-palette-du-goût.html">
                     <h5 class="resto__card__new resto__card__new--paint">Nouveau</h5>
@@ -133,21 +135,21 @@
     </main>
     <!--PARTIE 5 (ACCUEIL): PIED-DE-PAGE-->
     <footer class="footer footer--paint">
-        <img class="footer__logo" src="images/logo/ohmyfood@2x(white).svg" alt="Logo OhMyFood">
-        <div class="footer__item">
+        <img class="footer__logo" src="./images/logo/ohmyfood@2x(white).svg" alt="Logo OhMyFood">
+        <a class="footer__item" href="#Proposer-un-restaurant">
             <div class="footer__item__illustration"><i class="fas fa-utensils fa-xs"></i></div>
-            <a href="#Proposer-un-restaurant">Proposer un restaurant</a>
-        </div>
-        <div class="footer__item">
+            <p class="footer__item__text">Proposer un restaurant</p>
+        </a>
+        <a class="footer__item" href="#Devenir-partenaire">
             <div class="footer__item__illustration"><i class="fas fa-hands-helping fa-xs"></i></div>
-            <a href="#Devenir-partenaire">Devenir partenaire</a>
-        </div>
-        <div class="footer__item">
-            <a href="#Mentions-légales">Mentions légales</a>
-        </div>
-        <div class="footer__item">
-            <a href="mailto:contact@ohmyfood.fr">Contact</a>
-        </div>
+            <p class="footer__item__text">Devenir partenaire</p>
+        </a>
+        <a class="footer__item" href="#Mentions-légales">
+            <p class="footer__item__text">Mentions légales</p>
+        </a>
+        <a class="footer__item" href="mailto:contact@ohmyfood.fr">
+            <p class="footer__item__text">Contact</p>
+        </a>
     </footer>
 </body>
 </html>

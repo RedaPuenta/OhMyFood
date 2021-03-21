@@ -1,9 +1,8 @@
 /*PARTIE 5 (ACCUEIL ET MENU): PIED-DE-PAGE*/
 .footer{
     padding: 28px 25px 30px 25px;
-    color: white;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: $size-start-tablet) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,6 +21,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        color: white;
 
         &__illustration{
             display: flex;
@@ -30,12 +30,20 @@
             width: 18px;
             height: 12px;
             margin-right: 10px;
+            color: inherit;
         }
 
-        a{
+        &__text{
             color: inherit;
             font-size: rem(17px);
             font-weight: bold;
         }
     }
+}
+
+/***TRANSITION ET ANIMATION***/ 
+/*Changement de la couleur du texte de la partie "PIED-DE-PAGE" au survol de la souris*/
+.footer__item:hover{
+    transition: color 0.5s;
+    color: map-get($color-client, third);
 }

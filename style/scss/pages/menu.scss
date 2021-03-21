@@ -67,7 +67,7 @@
 
             &--paint{
                 background-color: map-get($background-color, one);
-                @include box-shadow-v1(0px, 2px, 10px, map-get($box-shadow-color, one));
+                @include box-shadow-v2(0px, 2px, 10px, map-get($box-shadow-color, one));
             }
 
             &__content{
@@ -128,7 +128,7 @@
 }
 
 /***RESPONSIVE DESIGN***/ 
-@media screen and (min-width: 500px){
+@media screen and (min-width: $size-start-tablet){
     /*PARTIE 2 et 3 (MENU)*/
     .poster{
         height: 400px;
@@ -140,7 +140,7 @@
         height: 100%;
     }
     
-    .menu--responsive{
+    .menu-responsive{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -155,8 +155,8 @@
     }
 }
 
-/***ANIMATIONS***/ 
-/*Effet d'apparition des CARDS au chargement de la page*/
+/***TRANSITION ET ANIMATION***/ 
+/*Effet d'apparition des CARDS de la partie "MENU" au chargement de la page*/
 @for $i from 1 through 4 {
     .menu__dishes__card:nth-of-type(#{$i}){
         animation-delay: ((200*$i)+200)*1ms;
@@ -176,7 +176,7 @@
     }
 }
 
-/*Effet d'apparition des checks au survol de la souris sur les CARDS*/
+/*Effet d'apparition des checks au survol de la souris sur les CARDS de la partie "MENU"*/
 .menu__dishes__card__check{
     transition: width 0.3s ease-in-out;
     width: 0px;

@@ -13,10 +13,10 @@
 </head>
 <body>
     <!--PARTIE 1 (MENU): EN-TETE-->
-    <header>
-        <a class="back" href="../../index.html"><i class="fas fa-arrow-left fa-lg"></i></a>
-        <div class="en-tete en-tete--paint">
-            <img class="en-tete__logo" src="../../images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+    <header class="header">
+        <a class="header__back" href="../../index.html"><i class="fas fa-arrow-left fa-lg"></i></a>
+        <div class="header__content header__content--paint">
+            <img class="header__content__logo" src="../../images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
         </div>
     </header>
     <main>
@@ -33,7 +33,7 @@
                     <i class="components-love-menu__filled fa fa-heart fa-2x"></i>
                 </div>
             </div>
-            <div class="menu--responsive">
+            <div class="menu-responsive">
                 <div class="menu__dishes">
                     <h3 class="menu__dishes__title">ENTRÉES</h3>
                     <!--Entrée 1-->
@@ -161,30 +161,28 @@
                     </a>
                 </div>
             </div>
-            <form method="POST" action="traitement.php">
-                <button class="components-button components-button--paint" type="button" name="order-btn" id="order-btn">
-                    <span  class="components-button__message">Commander</span>
-                </button>
-            </form>
+            <button class="components-button components-button--paint" type="button" name="order-btn" id="order-btn">
+                <span  class="components-button__message">Commander</span>
+            </button>
         </section>
     </main>
     <!--PARTIE 4 (MENU): PIED-DE-PAGE-->
     <footer class="footer footer--paint">
         <img class="footer__logo" src="../../images/logo/ohmyfood@2x(white).svg" alt="Logo OhMyFood">
-        <div class="footer__item">
+        <a class="footer__item" href="#Proposer-un-restaurant">
             <div class="footer__item__illustration"><i class="fas fa-utensils fa-xs"></i></div>
-            <a href="#Proposer-un-restaurant">Proposer un restaurant</a>
-        </div>
-        <div class="footer__item">
+            <p class="footer__item__text">Proposer un restaurant</p>
+        </a>
+        <a class="footer__item" href="#Devenir-partenaire">
             <div class="footer__item__illustration"><i class="fas fa-hands-helping fa-xs"></i></div>
-            <a href="#Devenir-partenaire">Devenir partenaire</a>
-        </div>
-        <div class="footer__item">
-            <a href="#Mentions-légales">Mentions légales</a>
-        </div>
-        <div class="footer__item">
-            <a href="mailto:contact@ohmyfood.fr">Contact</a>
-        </div>
+            <p class="footer__item__text">Devenir partenaire</p>
+        </a>
+        <a class="footer__item" href="#Mentions-légales">
+            <p class="footer__item__text">Mentions légales</p>
+        </a>
+        <a class="footer__item" href="mailto:contact@ohmyfood.fr">
+            <p class="footer__item__text">Contact</p>
+        </a>
     </footer>
 </body>
 </html>

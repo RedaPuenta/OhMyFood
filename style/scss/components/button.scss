@@ -24,6 +24,7 @@ $button-menu-width: 210px;
 
         &--paint{
             @include box-shadow-v3(0px, 5px, 8px, map-get($box-shadow-color, two));
+            background: $button-degraded;
         }
            
         &__message{

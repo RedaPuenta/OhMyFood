@@ -21,5 +21,7 @@ $font-family: (
     texts: ('Roboto', sans-serif)
 );
 
+$size-start-tablet: 501px;
+
 $button-degraded: linear-gradient(map-get($color-client, secondary), map-get($color-client, primary));
 $love-degraded: linear-gradient(map-get($color-client, primary), map-get($color-client, secondary));
