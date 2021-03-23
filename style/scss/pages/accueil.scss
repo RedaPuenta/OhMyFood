@@ -7,23 +7,24 @@
         justify-content: center;
         align-items: center;
         height: 55px;
-        padding-right: 10px;
+        
 
         &--paint{
             background-color: map-get($background-color, two);
         }
 
         &__search{
-            margin-left: 18px;
+            margin-left: rem(18px);
             font-size: rem(19.5px);
             background-color: transparent;
             border: none;
-            width: 140px;
+            width: rem(140px);
 
             &::placeholder{
                 font-size: rem(19.5px);
                 font-weight: bold;
-                color: grey;
+                color: rgba(128, 128, 128, 0.712);
+                text-align: center;
             }
         }
     }
@@ -101,8 +102,8 @@
 
         &__icon{
             text-align: center;
-            width: 30px;
-            margin: 0 20px;
+            width: rem(30px);
+            margin: 0 rem(20px);
             color: grey;
         }
 

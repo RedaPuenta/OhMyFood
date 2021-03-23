@@ -35,6 +35,11 @@ html {
   font-size: 100%;
 }
 
+body {
+  width: 100%;
+  min-width: 319px;
+}
+
 a, p, span, h1, h2, h3, h4, h5, h6, ::placeholder {
   font-weight: normal;
   font-size: medium;
@@ -54,6 +59,28 @@ a, a:hover, a:active {
   color: black;
 }
 
+button, input {
+  outline: none;
+}
+
+@media screen and (max-width: 380px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 350px) {
+  :root {
+    font-size: 12px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
 /***LOADING SPINNER***/
 .components-loading-spinner {
   position: fixed;
@@ -233,7 +260,7 @@ img[class*=components-card-control] {
 }
 .header__content__logo {
   margin-top: 10px;
-  width: 186px;
+  width: 11.625rem;
 }
 
 /***(ACCUEIL) : MAIN***/
@@ -243,22 +270,22 @@ img[class*=components-card-control] {
   justify-content: center;
   align-items: center;
   height: 55px;
-  padding-right: 10px;
 }
 .loc-book__location--paint {
   background-color: #e9e9e9;
 }
 .loc-book__location__search {
-  margin-left: 18px;
+  margin-left: 1.125rem;
   font-size: 1.21875rem;
   background-color: transparent;
   border: none;
-  width: 140px;
+  width: 8.75rem;
 }
 .loc-book__location__search::placeholder {
   font-size: 1.21875rem;
   font-weight: bold;
-  color: grey;
+  color: rgba(128, 128, 128, 0.712);
+  text-align: center;
 }
 .loc-book__booking {
   display: flex;
@@ -356,8 +383,8 @@ img[class*=components-card-control] {
 }
 .operation__card__icon {
   text-align: center;
-  width: 30px;
-  margin: 0 20px;
+  width: 1.875rem;
+  margin: 0 1.25rem;
   color: grey;
 }
 .operation__card__text {
@@ -579,6 +606,7 @@ img[class*=components-card-control] {
 }
 .menu__headline__title {
   font-size: 1.875rem;
+  margin-right: 20px;
 }
 .menu__headline .components-love-menu {
   display: flex;
