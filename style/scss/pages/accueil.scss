@@ -105,6 +105,10 @@
             width: rem(30px);
             margin: 0 rem(20px);
             color: grey;
+
+            &__item{
+                font-size: rem(20px);
+            }
         }
 
         &__text{

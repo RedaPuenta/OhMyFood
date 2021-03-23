@@ -387,6 +387,9 @@ img[class*=components-card-control] {
   margin: 0 1.25rem;
   color: grey;
 }
+.operation__card__icon__item {
+  font-size: 1.25rem;
+}
 .operation__card__text {
   font-size: 1.125rem;
   font-weight: bold;
