@@ -124,6 +124,14 @@
 .resto{
     padding: 55px 20px 50px 20px;
 
+    .resto-responsive{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(460px, max-content));
+        justify-content: center;
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
     &--paint{
         background-color: map-get($background-color, three);
     }
@@ -140,7 +148,6 @@
         overflow: hidden;
         width: 100%;
         border-radius: 20px;
-        margin-bottom: 20px;
 
         &--paint{
             @include box-shadow-v3(0px, 2px, 10px, map-get($box-shadow-color, one));
@@ -206,14 +213,19 @@
         margin-bottom: 0;
     }
     
-    .operation-responsive, .resto-responsive{
+    .operation-responsive{
         display: flex;
+        justify-content: space-evenly;
         flex-wrap: wrap;
+        margin-top: 30px;
     }
 
     .operation__card, .resto__card{
         width: 460px;
-        margin: 30px auto 0 auto;
+    }
+
+    .operation__card{
+        margin: 0 30px 30px 30px;
     }
 }
 
